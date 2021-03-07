@@ -1,0 +1,49 @@
+
+<!-- INCLUDE -->
+
+<%- include('include/_header') %>
+
+<!-- INCLUDE -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="/add_user" class="border-shadow">
+            <span class="text-gradient"><i class="fa fa-user" aria-hidden="true"></i>New User</span>
+            </a>
+        </div> 
+        <!-- FORM-HANDLING -->
+        <form action="/" method="post">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>@Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <%- include('include/_show') %>
+            </tbody>
+        </table>
+            
+        </form>
+        
+        <!-- FORM-HANDLING -->
+    </div>
+</main>
+<script type="text/javascript">
+    
+    document.querySelector('#update_user').addEventListener('submit', (event)=>{
+        event.preventDefault()
+    })
+</script> 
+<!-- INCLUDE -->
+
+<%- include('include/_footer') %>
+
+<!-- INCLUDE -->
+
